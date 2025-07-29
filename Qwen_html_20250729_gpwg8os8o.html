@@ -720,6 +720,21 @@
         window.onload = () => {
             Tetris.init();
         };
-    </script>
+    <script>
+    // ПЕРЕМЕСТИ ВЕСЬ КОД СЮДА, НО ОБЕРНИ В document.addEventListener('DOMContentLoaded', ...)
+    document.addEventListener('DOMContentLoaded', function() {
+        const Tetris = {
+            // ВСТУП ВЕСЬ ОБЪЕКТ Tetris, НАЧИНАЯ ОТ СЮДА:
+            COLS: 10,
+            ROWS: 20,
+            BLOCK_SIZE: 30,
+            // ...весь остальной код объекта Tetris...
+            // ...до конца, включая init() и window.onload...
+        };
+
+        // Запускаем игру
+        Tetris.init();
+    });
+</script>
 </body>
 </html>
